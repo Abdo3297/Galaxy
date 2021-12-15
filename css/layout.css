@@ -1,0 +1,231 @@
+/*general*/
+:root {
+    --main-color:#fb6e52;
+    --padding:50px;
+}
+@font-face {
+    font-family: 'roboto';
+    src: url(../Roboto/Roboto-Regular.ttf);
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'roboto', 'Cairo', sans-serif;
+}
+/*general*/
+/*shared*/
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px) {
+    .container {
+    width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+    width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+    width: 1170px;
+    }
+}
+/*shared*/
+/* nav */
+nav .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .content .img img {
+    height:60px;
+}
+nav .content .buton button {
+    padding: 15px;
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* nav */
+/* landing */
+section.landing {
+    background-image: url("../img/back.jpg");
+    background-size: cover;
+    height: calc(100vh - 65px);
+    position: relative;
+}
+section.landing .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.57);
+}
+section.landing .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+section.landing .content .txt {
+    color: white;
+    margin-bottom: 30px;
+}
+section.landing .content .txt h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+section.landing .content .txt p {
+    font-size: 15px;
+}
+@media (max-width:767px) {
+    section.landing .content .txt h2 {
+        font-size: 17px;
+    }
+    section.landing .content .txt p {
+        font-size: 10px;
+    }
+}
+section.landing .content .buton button {   
+    background-color: var(--main-color);
+    padding: 15px;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
+}
+section.landing .content .buton button:hover {
+    background-color: #fff;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+/* landing */
+/*feature*/
+section.features {
+    padding: var(--padding) 0;
+}
+section.features .feats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 10px;
+    text-align: center;
+}
+section.features .feats .feat i {
+    font-size: 40px;
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    margin-bottom: 15px;
+}
+section.features .feats .feat h2 {
+    margin-bottom: 15px;
+}
+section.features .feats .feat p {
+    color: #97999b;
+    margin-bottom: 15px;
+}
+section.features  .txt {
+    padding: var(--padding) 0 0 0;
+    text-align: center;
+}
+section.features  .txt p {
+    line-height: 2;
+    color: var(--main-color);
+}
+/*feature*/
+/* all-cards */
+section.all-cards {
+    padding: var(--padding) 0;
+}
+section.all-cards .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 10px;
+    text-align: center;
+}
+section.all-cards .cards .card .img img {
+    border-radius: 8px;
+}
+section.all-cards .cards .card h2 , section.all-cards .cards .card p {
+    margin: 10px 0;
+}
+section.all-cards .cards .card p {
+    color: #97999b;
+}
+/* all-cards */
+/* blog */
+section.blog {
+    padding: var(--padding) 0;
+    background-color: #f9f9f9;
+}
+section.blog  h3 {
+    text-align: center;
+    color: #45474e;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+section.blog .cards {
+    padding: var(--padding) 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 10px;
+    text-align: left;
+}
+@media (max-width:767px) {
+    section.blog .cards {
+        text-align: center;
+    }
+}
+section.blog .cards .card .img img , section.blog .cards .card p  {
+    margin-bottom: 10px;
+}
+section.blog .cards .card .img img {
+    border-radius: 8px;
+}
+section.blog .cards .card h2 {
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+section.blog .cards .card p {
+    color: #45474e;
+}
+/* blog */
+/* footer */
+footer {
+    background-color: #292c34;
+}
+footer .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .image {
+    display: flex;
+    align-items: center;
+}
+footer .content span {
+    color: #797c82;
+}
+footer .content i {
+    color: #fff;
+}
+footer .content i {
+    font-size: 20px;
+    margin: 5px;
+}
+/* footer */
